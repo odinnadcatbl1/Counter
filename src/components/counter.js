@@ -31,17 +31,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-
-    const {inc, dec, rnd} = bindActionCreators(actions, dispatch);
-
-    return {
-        inc, 
-        dec,
-        rnd: () => {
-            const value = Math.floor(Math.random()*10);
-            rnd(value);
-        }
-    };
+    return bindActionCreators(actions, dispatch); // функции inc, dec, rnd внутри
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(Counter); // вместо mapDispatchToProps можно сразу передать объект actions
