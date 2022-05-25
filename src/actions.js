@@ -10,3 +10,5 @@ export const rnd = () => {
         payload: Math.floor(Math.random()*10)
     };
 };
+
+export const res = () => ({type: 'RES'});

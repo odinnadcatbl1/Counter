@@ -7,6 +7,8 @@ const reducer = (state=0, action) => {
             return state - 1;
         case 'RND':
             return state + action.payload;
+        case 'RES':
+            return 0;
         default: 
             return state;
     }

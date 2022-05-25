@@ -4,7 +4,7 @@ import { bindActionCreators } from "redux";
 
 import * as actions from '../actions'
 
-const Counter = ({counter, inc, dec, rnd}) => {
+const Counter = ({counter, inc, dec, rnd, res}) => {
     return (    
         <div className="jumbotron">
             <h2>{counter}</h2>
@@ -20,6 +20,11 @@ const Counter = ({counter, inc, dec, rnd}) => {
                 onClick={rnd}
                 className="btn btn-primary btn-lg">RANDOM
             </button>
+            <button
+                onClick={res}
+                className="btn btn-primary btn-lg">RESET
+            </button>
+            
         </div>
     );
 };
